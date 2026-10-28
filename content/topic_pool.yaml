@@ -30,7 +30,7 @@ pillars:
 monetization:
   enabled: true
   program: coupang_partners
-  start_after_posts: 20        # 계정 초반에는 링크 없이 글만 쌓는다 (새 계정 + 링크 = 스팸 판정 위험)
+  start_after_posts: 0        # 계정 초반에는 링크 없이 글만 쌓는다 (새 계정 + 링크 = 스팸 판정 위험)
   max_per_day: 1               # 하루 제휴 글 상한
   product_cooldown_days: 14
 
