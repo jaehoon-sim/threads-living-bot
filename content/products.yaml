@@ -13,4 +13,104 @@
 #
 # 비어 있으면 제휴 글은 만들어지지 않는다.
 
-products: []
+products:
+  - key: tissue-comet-3ply-30m-30
+    name: "코멧 순백 3겹 라벤더 바닐라 롤화장지, 30m, 30개입, 1개"
+    link: "https://link.coupang.com/a/icTidcmWjY"
+    pillars: [tissue]
+    facts:
+      - "3겹"
+      - "한 롤 30m"
+      - "30롤"
+    active: true
+
+  - key: tissue-kkn-2ply-40m-30
+    name: "깨끗한나라 에코 베이직 2겹 롤화장지, 40m, 30개입, 1개"
+    link: "https://link.coupang.com/a/icTjpzh5hY"
+    pillars: [tissue]
+    facts:
+      - "2겹"
+      - "한 롤 40m"
+      - "30롤"
+    active: true
+
+  - key: kitchentowel-comet-130-6
+    name: "코멧 천연펄프 키친타올 롤형 2겹 130매, 6롤, 1개"
+    link: "https://link.coupang.com/a/icTqT6XMke"
+    pillars: [tissue, kitchen]
+    facts:
+      - "천연펄프"
+      - "2겹"
+      - "롤당 130매"
+      - "6롤"
+    active: true
+
+  - key: wetwipe-tamsa-cap-100-10
+    name: "탐사 클래식 물티슈 캡형, 100매, 10개"
+    link: "https://link.coupang.com/a/icTqqhUgEK"
+    pillars: [tissue, cleaning]
+    facts:
+      - "캡형"
+      - "팩당 100매"
+      - "10팩"
+    active: true
+
+  - key: water-tamsa-2l-36
+    name: "탐사 샘물 무라벨, 2L, 36개"
+    link: "https://link.coupang.com/a/icTm8hLEbc"
+    pillars: [water]
+    facts:
+      - "무라벨"
+      - "2L"
+      - "36병"
+    active: true
+
+  - key: rice-hetbahn-210-12
+    name: "햇반 백미밥, 210g, 12개"
+    link: "https://link.coupang.com/a/icTnCmGeK4"
+    pillars: [food]
+    facts:
+      - "백미밥"
+      - "개당 210g"
+      - "12개"
+    active: true
+
+  - key: ramen-jin-spicy-20
+    name: "오뚜기 진라면 매운맛 멀티팩 120g, 20개"
+    link: "https://link.coupang.com/a/icTn6bLZ00"
+    pillars: [food]
+    facts:
+      - "진라면 매운맛"
+      - "봉지당 120g"
+      - "20봉"
+    active: true
+
+  - key: detergent-tamsa-liquid-14l
+    name: "탐사 파워워시 액체 세탁세제, 14L, 1개"
+    link: "https://link.coupang.com/a/icToz6Wr80"
+    pillars: [laundry]
+    facts:
+      - "액체 세탁세제"
+      - "14L"
+    active: true
+
+  - key: detergent-bubbleup-capsule-120
+    name: "버블업 딥 클린 초고농축 캡슐세탁세제 120개입, 1개"
+    link: "https://link.coupang.com/a/icTpseWY3M"
+    pillars: [laundry]
+    facts:
+      - "캡슐 세탁세제"
+      - "초고농축"
+      - "120개입"
+    active: true
+
+  - key: dishsoap-frill-refill-1l-2
+    name: "프릴 시크릿오브 베이킹소다 퓨어레몬향 리필, 1L, 2개"
+    link: "https://link.coupang.com/a/icTpV6jxme"
+    pillars: [kitchen]
+    facts:
+      - "주방세제 리필"
+      - "베이킹소다"
+      - "퓨어레몬향"
+      - "1L 2개"
+    active: true
