@@ -1,0 +1,27 @@
+name: refresh-threads-token
+
+on:
+  schedule:
+    - cron: "0 3 1,15 * *"      # 매월 1일·15일 (토큰 수명 60일 대비 여유 있게)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: 토큰 갱신 후 시크릿 업데이트
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}          # secrets 쓰기 권한이 있는 fine-grained PAT
+        run: |
+          NEW=$(python scripts/refresh_token.py)
+          gh secret set THREADS_ACCESS_TOKEN --body "$NEW" --repo "${{ github.repository }}"
+          echo "토큰 갱신 완료"

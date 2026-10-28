@@ -1,0 +1,45 @@
+# ite.mmoa — 생필품·식품 "개당 가격" 계정 설정
+#
+# 계정 콘셉트: 매일 사는 물건을 "얼마에, 몇 개짜리로, 어떤 걸" 사는지 서로 묻고 비교하는 계정.
+# 써 본 척하는 후기 계정이 아니다. 숫자(롤 수, 용량, 개수)와 선택을 묻는다.
+
+account:
+  handle: "ite.mmoa"
+  persona: "장보기 숫자에 진심인 20대 초반 자취러 느낌의 말투. 단, 실제 경험·신상은 지어내지 않는다."
+
+# 콘텐츠 기둥 — 하루 글은 서로 다른 기둥에서 고른다
+pillars:
+  - key: tissue
+    name: "휴지·물티슈·키친타월"
+  - key: laundry
+    name: "세탁세제·섬유유연제·건조기 시트"
+  - key: kitchen
+    name: "주방세제·수세미·랩·지퍼백·식기세척기 세제"
+  - key: water
+    name: "생수·탄산수·음료 박스"
+  - key: food
+    name: "라면·즉석밥·냉동식품·간편식"
+  - key: bath
+    name: "샴푸·바디워시·치약·칫솔·면도기"
+  - key: cleaning
+    name: "청소용품·쓰레기봉투·탈취제"
+  - key: snack
+    name: "커피·간식·견과"
+
+# ── 쿠팡파트너스 수익화 ───────────────────────────────────────────
+monetization:
+  enabled: true
+  program: coupang_partners
+  start_after_posts: 20        # 계정 초반에는 링크 없이 글만 쌓는다 (새 계정 + 링크 = 스팸 판정 위험)
+  max_per_day: 1               # 하루 제휴 글 상한
+  product_cooldown_days: 14
+
+  # 대가성 문구 — 공정위 추천·보증 심사지침. publish.py 가 코드로 검사하고, 어긋나면 발행하지 않는다
+  disclosure: "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+  disclosure_short: "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다."   # 본문 첫 줄용
+  link_placement: first_reply
+
+  rules:
+    - "상품은 products.yaml 에서 active: true 인 것만 쓴다. 목록에 없는 상품을 언급하거나 링크를 만들지 않는다."
+    - "상품 특징은 facts 에 적힌 것만. 가격·할인율은 바뀌므로 쓰지 않는다(API 연동 전까지)."
+    - "써 본 척하지 않는다. '최저가' '역대급' '지금 안 사면' 같은 구매 압박 표현 금지."

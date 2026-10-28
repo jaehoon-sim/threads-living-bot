@@ -1,0 +1,13 @@
+{
+  "id": "2026-11-12-2130",
+  "scheduled_at": "2026-11-12T12:30:00+00:00",
+  "topic_key": "tissue",
+  "angle": "선택 질문 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n휴지 고를 때 롤 수만 봐?\n\n같은 30롤이어도 한 롤 길이가 다르면\n실제로 쓰는 양이 꽤 차이 나.\n\n너는 롤 수 봐, 길이 봐?",
+  "topic_tag": "자취",
+  "affiliate": {
+    "product_key": "tissue-example-1",
+    "blurb": "롤 길이 표기 확인용 예시"
+  },
+  "status": "pending"
+}

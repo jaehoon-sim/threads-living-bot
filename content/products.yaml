@@ -1,0 +1,16 @@
+# 쿠팡파트너스 상품 카탈로그 (ite.mmoa)
+#
+# 링크는 partners.coupang.com 에서 직접 만든 것만 넣는다 (상품 검색 → 링크 생성).
+# Claude 루틴은 이 목록 밖의 상품을 추천하지 않고, facts 에 없는 특징을 지어내지 않는다.
+#
+# 필드
+#   key      상품 고유 키 (영문·하이픈)
+#   name     상품명 (쿠팡 표기 그대로)
+#   link     https://link.coupang.com/a/xxxxx 형태의 파트너스 단축 링크
+#   pillars  붙일 수 있는 콘텐츠 기둥 (topic_pool.yaml 의 key)
+#   facts    상품 페이지에서 확인한 사실(롤 수, 길이, 용량, 개수 등). 가격·할인율은 넣지 않는다
+#   active   true 인 것만 쓰인다
+#
+# 비어 있으면 제휴 글은 만들어지지 않는다.
+
+products: []

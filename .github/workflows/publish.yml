@@ -1,0 +1,72 @@
+name: publish-to-threads
+
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"   # 15분마다, 붐비는 정각·30분을 피함
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "발행하지 않고 계획만 출력"
+        type: boolean
+        default: false
+
+concurrency:
+  group: threads-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests pyyaml
+
+      - name: 큐 발행
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          IMAGE_BRANCH: ${{ github.ref_name }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: python scripts/publish.py
+
+      - name: 답글 발행
+        continue-on-error: true
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: python scripts/replies.py send
+
+      - name: 댓글 수집
+        continue-on-error: true
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: python scripts/replies.py fetch
+
+      - name: 인사이트 수집 (3시간마다)
+        continue-on-error: true
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: python scripts/metrics.py
+
+      - name: 발행 결과 커밋
+        if: always()
+        run: |
+          git config user.name  "threads-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add queue history inbox 2>/dev/null || git add queue history
+          git diff --staged --quiet || git commit -m "chore: 발행 결과 반영 [skip ci]"
+          git pull --rebase --autostash || true
+          git push
