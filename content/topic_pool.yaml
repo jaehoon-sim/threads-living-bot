@@ -30,11 +30,7 @@ pillars:
 monetization:
   enabled: true
   program: coupang_partners
-<<<<<<< HEAD
-  start_after_posts: 0        # 계정 초반에는 링크 없이 글만 쌓는다 (새 계정 + 링크 = 스팸 판정 위험)
-=======
   start_after_posts: 0         # 재훈 결정(10/28): 첫 글부터 제휴 허용. 단 하루 1편(21:30)만
->>>>>>> dbb88cb (상품 10개 + 첫 글부터 제휴)
   max_per_day: 1               # 하루 제휴 글 상한
   product_cooldown_days: 14
 
