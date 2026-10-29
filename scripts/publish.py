@@ -137,7 +137,8 @@ def record(item: dict, *, status: str, post_id: str | None = None,
         "status": status,
         "post_id": post_id,
         "topic_key": item.get("topic_key"),
-        "affiliate_product": (item.get("affiliate") or {}).get("product_key"),
+        "affiliate_product": (",".join(i["product_key"] for i in aff_items(item["affiliate"]))
+                              if item.get("affiliate") else None),
         "text": (item.get("text") or "")[:200],
         "error": error,
     }
@@ -145,14 +146,26 @@ def record(item: dict, *, status: str, post_id: str | None = None,
         f.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+MAX_AFF_ITEMS = 3
+
+
+def aff_items(aff: dict) -> list[dict]:
+    """affiliate 는 단일 상품 {"product_key","blurb"} 또는 묶음 {"items": [{...}, ...]} 둘 다 받는다."""
+    if aff.get("items"):
+        return list(aff["items"])
+    return [{"product_key": aff.get("product_key"), "blurb": aff.get("blurb")}]
+
+
 def build_affiliate_reply(aff: dict) -> str:
     """링크 답글을 조립한다. URL 은 카탈로그에서만 꺼낸다."""
-    product = CATALOG[aff["product_key"]]
-    blurb = (aff.get("blurb") or "").strip()
-    lines = [MON["disclosure"], "", product["name"].strip()]
-    if blurb:
-        lines.append(blurb)
-    lines.append(product["link"].strip())
+    lines = [MON["disclosure"]]
+    for it in aff_items(aff):
+        product = CATALOG[it["product_key"]]
+        blurb = (it.get("blurb") or "").strip()
+        lines += ["", product["name"].strip()]
+        if blurb:
+            lines.append(blurb)
+        lines.append(product["link"].strip())
     return "\n".join(lines)
 
 
@@ -178,14 +191,18 @@ def validate(item: dict) -> str | None:
     # ── 제휴 글 검사 ──
     if not MON.get("enabled"):
         return "monetization.enabled 가 false 인데 제휴 글이 큐에 있음"
-    key = aff.get("product_key")
-    product = CATALOG.get(key)
-    if not product:
-        return f"products.yaml 에 없는 상품: {key}"
-    if not product.get("active"):
-        return f"비활성 상품: {key}"
-    if not (product.get("link") or "").startswith("https://link.coupang.com/"):
-        return f"상품 링크 형식 오류: {key}"
+    items = aff_items(aff)
+    if not 1 <= len(items) <= MAX_AFF_ITEMS:
+        return f"제휴 상품은 1~{MAX_AFF_ITEMS}개 (지금 {len(items)}개)"
+    for it in items:
+        key = it.get("product_key")
+        product = CATALOG.get(key)
+        if not product:
+            return f"products.yaml 에 없는 상품: {key}"
+        if not product.get("active"):
+            return f"비활성 상품: {key}"
+        if not (product.get("link") or "").startswith("https://link.coupang.com/"):
+            return f"상품 링크 형식 오류: {key}"
     short = (MON.get("disclosure_short") or MON.get("disclosure") or "").strip()
     if not short or not text.startswith(short):
         return "제휴 글 본문이 대가성 문구로 시작하지 않음"
@@ -234,10 +251,11 @@ def process(path: pathlib.Path, item: dict) -> bool:
     aff = item.get("affiliate")
     if aff:
         replies.insert(0, build_affiliate_reply(aff))   # 링크 답글은 항상 첫 답글
-        check_link(CATALOG[aff["product_key"]]["link"])
+        for it in aff_items(aff):
+            check_link(CATALOG[it["product_key"]]["link"])
 
-    log(f"→ {item_id} 발행 시작 (image={'yes' if image_url else 'no'}, "
-        f"affiliate={aff['product_key'] if aff else '-'})")
+    keys = ",".join(it["product_key"] for it in aff_items(aff)) if aff else "-"
+    log(f"→ {item_id} 발행 시작 (image={'yes' if image_url else 'no'}, affiliate={keys})")
     if DRY_RUN:
         log(f"   [dry-run] text={item['text'][:60]!r}")
         for r in replies:

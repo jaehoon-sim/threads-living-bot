@@ -30,9 +30,9 @@ pillars:
 monetization:
   enabled: true
   program: coupang_partners
-  start_after_posts: 0         # 재훈 결정(10/28): 첫 글부터 제휴 허용. 단 하루 1편(21:30)만
-  max_per_day: 1               # 하루 제휴 글 상한
-  product_cooldown_days: 14
+  start_after_posts: 0         # 재훈 결정(10/28): 첫 글부터 제휴 허용
+  max_per_day: 2               # 하루 제휴 글 상한 (12:30 상황형 + 21:30 비교·묶음형)
+  product_cooldown_days: 3    # 상품 10개로 하루 최대 4개를 돌리므로 짧게. 상품을 늘리면 다시 늘린다
 
   # 대가성 문구 — 공정위 추천·보증 심사지침. publish.py 가 코드로 검사하고, 어긋나면 발행하지 않는다
   disclosure: "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
