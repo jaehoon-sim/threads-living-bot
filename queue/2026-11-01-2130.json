@@ -1,0 +1,21 @@
+{
+  "id": "2026-11-01-2130",
+  "scheduled_at": "2026-11-01T12:30:00+00:00",
+  "topic_key": "laundry",
+  "angle": "비교·묶음형 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n세탁세제, 14L냐 120개냐\n\n① 탐사 파워워시 액체 14L\n② 버블업 초고농축 캡슐 120개입\n\n액체는 L, 캡슐은 개수로 표기해서\n숫자만 봐선 바로 비교가 안 돼.\n\n너는 뭐 기준으로 골라?",
+  "topic_tag": "살림",
+  "affiliate": {
+    "items": [
+      {
+        "product_key": "detergent-tamsa-liquid-14l",
+        "blurb": "액체 세탁세제 14L"
+      },
+      {
+        "product_key": "detergent-bubbleup-capsule-120",
+        "blurb": "초고농축 캡슐 120개입"
+      }
+    ]
+  },
+  "status": "pending"
+}
