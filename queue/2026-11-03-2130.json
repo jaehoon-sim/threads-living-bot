@@ -1,0 +1,21 @@
+{
+  "id": "2026-11-03-2130",
+  "scheduled_at": "2026-11-03T12:30:00+00:00",
+  "topic_key": "kitchen",
+  "angle": "비교·묶음형 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n주방 쟁임, 세제랑 키친타올\n\n① 프릴 베이킹소다 주방세제 리필 1L 2개\n② 코멧 키친타올 2겹 130매 6롤\n\n세제는 용량, 키친타올은 롤당 매수로 봐야 해서\n표기 단위가 서로 달라.\n\n주방 쟁임은 뭐부터 채워?",
+  "topic_tag": "살림",
+  "affiliate": {
+    "items": [
+      {
+        "product_key": "dishsoap-frill-refill-1l-2",
+        "blurb": "주방세제 리필 1L 2개"
+      },
+      {
+        "product_key": "kitchentowel-comet-130-6",
+        "blurb": "2겹 롤당 130매, 6롤"
+      }
+    ]
+  },
+  "status": "pending"
+}
