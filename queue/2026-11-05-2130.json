@@ -1,0 +1,21 @@
+{
+  "id": "2026-11-05-2130",
+  "scheduled_at": "2026-11-05T12:30:00+00:00",
+  "topic_key": "tissue",
+  "angle": "비교·묶음형 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n휴지랑 물티슈, 단위가 달라\n\n① 깨끗한나라 에코 베이직 2겹 40m 30롤\n② 탐사 클래식 캡형 물티슈 100매 10팩\n\n휴지는 길이, 물티슈는 매수로 표기해서\n롤 수만 봐선 바로 비교가 안 돼.\n\n너는 뭐 기준으로 골라?",
+  "topic_tag": "자취",
+  "status": "pending",
+  "affiliate": {
+    "items": [
+      {
+        "product_key": "tissue-kkn-2ply-40m-30",
+        "blurb": "2겹 40m 30롤"
+      },
+      {
+        "product_key": "wetwipe-tamsa-cap-100-10",
+        "blurb": "캡형 100매 10팩"
+      }
+    ]
+  }
+}
