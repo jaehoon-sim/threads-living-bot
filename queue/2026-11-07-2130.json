@@ -1,0 +1,21 @@
+{
+  "id": "2026-11-07-2130",
+  "scheduled_at": "2026-11-07T12:30:00+00:00",
+  "topic_key": "food",
+  "angle": "비교·묶음형 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n라면 20봉이면 밥은 몇 개?\n\n① 오뚜기 진라면 매운맛 120g 20봉\n② 햇반 백미밥 210g 12개\n\n라면은 봉 수, 밥은 개수로 표기해서\n한 끼 기준으로 맞춰봐야 해.\n\n너는 라면이랑 밥 몇 대 몇으로 사?",
+  "topic_tag": "자취",
+  "status": "pending",
+  "affiliate": {
+    "items": [
+      {
+        "product_key": "ramen-jin-spicy-20",
+        "blurb": "매운맛 120g 20봉"
+      },
+      {
+        "product_key": "rice-hetbahn-210-12",
+        "blurb": "백미밥 210g 12개"
+      }
+    ]
+  }
+}
