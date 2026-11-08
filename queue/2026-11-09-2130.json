@@ -1,0 +1,21 @@
+{
+  "id": "2026-11-09-2130",
+  "scheduled_at": "2026-11-09T12:30:00+00:00",
+  "topic_key": "tissue",
+  "angle": "비교·묶음형 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n휴지 30롤, 총 길이로 따져봐\n\n① 코멧 순백 3겹 30m 30롤\n② 깨끗한나라 에코 베이직 2겹 40m 30롤\n\n롤 수는 같아도 한 롤 길이가 10m 차이라\n겹수랑 길이 중 뭘 보느냐가 갈려.\n\n너는 뭐 기준으로 골라?",
+  "topic_tag": "살림",
+  "affiliate": {
+    "items": [
+      {
+        "product_key": "tissue-comet-3ply-30m-30",
+        "blurb": "3겹 한 롤 30m 30롤"
+      },
+      {
+        "product_key": "tissue-kkn-2ply-40m-30",
+        "blurb": "2겹 한 롤 40m 30롤"
+      }
+    ]
+  },
+  "status": "pending"
+}
