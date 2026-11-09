@@ -1,0 +1,21 @@
+{
+  "id": "2026-11-10-2130",
+  "scheduled_at": "2026-11-10T12:30:00+00:00",
+  "topic_key": "tissue",
+  "angle": "비교·묶음형 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n물티슈 vs 키친타올, 뭐가 더 많아?\n\n① 탐사 클래식 캡형 물티슈 100매 10팩\n② 코멧 천연펄프 키친타올 2겹 130매 6롤\n\n물티슈는 팩 수, 키친타올은 롤당 매수로 표기해서\n총 매수로 바꿔야 비교가 돼.\n\n너는 뭐 기준으로 골라?",
+  "topic_tag": "살림",
+  "affiliate": {
+    "items": [
+      {
+        "product_key": "wetwipe-tamsa-cap-100-10",
+        "blurb": "캡형 팩당 100매 10팩"
+      },
+      {
+        "product_key": "kitchentowel-comet-130-6",
+        "blurb": "2겹 롤당 130매 6롤"
+      }
+    ]
+  },
+  "status": "pending"
+}
