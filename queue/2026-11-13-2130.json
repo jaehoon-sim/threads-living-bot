@@ -1,0 +1,21 @@
+{
+  "id": "2026-11-13-2130",
+  "scheduled_at": "2026-11-13T12:30:00+00:00",
+  "topic_key": "tissue",
+  "angle": "비교·묶음형 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n휴지 3겹이냐 2겹이냐\n\n① 코멧 순백 3겹 30m 30롤\n② 깨끗한나라 에코 베이직 2겹 40m 30롤\n\n둘 다 30롤인데\n겹수가 하나 많은 쪽이 한 롤은 10m 짧아.\n도톰한 쪽이냐 긴 쪽이냐로 갈리더라.\n\n너네 집 휴지는 몇 겹이야?",
+  "topic_tag": "살림",
+  "affiliate": {
+    "items": [
+      {
+        "product_key": "tissue-comet-3ply-30m-30",
+        "blurb": "3겹 한 롤 30m 30롤"
+      },
+      {
+        "product_key": "tissue-kkn-2ply-40m-30",
+        "blurb": "2겹 한 롤 40m 30롤"
+      }
+    ]
+  },
+  "status": "pending"
+}
