@@ -1,0 +1,21 @@
+{
+  "id": "2026-11-14-2130",
+  "scheduled_at": "2026-11-14T12:30:00+00:00",
+  "topic_key": "kitchen",
+  "angle": "비교·묶음형 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n주방 묶음, 합치면 얼마야?\n\n① 프릴 베이킹소다 퓨어레몬향 주방세제 리필 1L 2개\n② 코멧 천연펄프 키친타올 2겹 130매 6롤\n\n묶음째로 합치면 세제는 2L,\n키친타올은 780매야.\n\n묶음 살 때 합친 양까지 계산해봐?",
+  "topic_tag": "살림",
+  "affiliate": {
+    "items": [
+      {
+        "product_key": "dishsoap-frill-refill-1l-2",
+        "blurb": "주방세제 리필 1L 2개, 합쳐서 2L"
+      },
+      {
+        "product_key": "kitchentowel-comet-130-6",
+        "blurb": "2겹 롤당 130매 6롤, 합쳐서 780매"
+      }
+    ]
+  },
+  "status": "pending"
+}
