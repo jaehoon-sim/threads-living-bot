@@ -1,0 +1,25 @@
+{
+  "id": "2026-11-18-2130",
+  "scheduled_at": "2026-11-18T12:30:00+00:00",
+  "topic_key": "tissue",
+  "angle": "비교·묶음형 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n닦는 거 3종, 자리별로 하나씩\n\n① 화장실 — 코멧 순백 3겹 롤화장지 30m 30롤\n② 주방 — 코멧 천연펄프 키친타올 2겹 130매 6롤\n③ 식탁 — 탐사 클래식 물티슈 캡형 100매 10팩\n\n한 번에 같이 사도\n묶음 개수가 30롤·6롤·10팩으로 제각각이야.\n\n셋 중에 너네 집에서 제일 먼저 떨어지는 건 뭐야?",
+  "topic_tag": "살림",
+  "affiliate": {
+    "items": [
+      {
+        "product_key": "tissue-comet-3ply-30m-30",
+        "blurb": "3겹 한 롤 30m 30롤"
+      },
+      {
+        "product_key": "kitchentowel-comet-130-6",
+        "blurb": "2겹 롤당 130매 6롤"
+      },
+      {
+        "product_key": "wetwipe-tamsa-cap-100-10",
+        "blurb": "캡형 팩당 100매 10팩"
+      }
+    ]
+  },
+  "status": "pending"
+}
