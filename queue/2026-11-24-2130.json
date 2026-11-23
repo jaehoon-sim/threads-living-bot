@@ -1,0 +1,21 @@
+{
+  "id": "2026-11-24-2130",
+  "scheduled_at": "2026-11-24T12:30:00+00:00",
+  "topic_key": "laundry",
+  "angle": "비교·묶음형 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n세제 한 통, 빨래 몇 번 돌려?\n\n① 탐사 파워워시 액체 세탁세제 14L\n② 버블업 딥 클린 초고농축 캡슐세탁세제 120개입\n\n캡슐은 한 번에 한 알씩 넣으면 120번에서 끝나고,\n액체는 한 번에 따르는 양에 따라 횟수가 달라져.\n횟수가 정해진 쪽이냐, 양을 조절하는 쪽이냐의 차이.\n\n너네 집은 일주일에 세탁기 몇 번 돌려?",
+  "topic_tag": "자취",
+  "affiliate": {
+    "items": [
+      {
+        "product_key": "detergent-tamsa-liquid-14l",
+        "blurb": "액체 세탁세제 14L"
+      },
+      {
+        "product_key": "detergent-bubbleup-capsule-120",
+        "blurb": "초고농축 캡슐세제 120개입"
+      }
+    ]
+  },
+  "status": "pending"
+}
