@@ -1,0 +1,21 @@
+{
+  "id": "2026-11-28-2130",
+  "scheduled_at": "2026-11-28T12:30:00+00:00",
+  "topic_key": "laundry",
+  "angle": "비교·묶음형 + 제휴",
+  "text": "[광고] 쿠팡 파트너스 활동으로 수수료를 받는 글입니다.\n\n빨래 양 들쭉날쭉할 때 세제는?\n\n① 탐사 파워워시 액체 세탁세제 14L\n② 버블업 딥 클린 초고농축 캡슐세탁세제 120개입\n\n액체는 14L 한 통에서 그날 빨래 양만큼 덜어 쓰고\n캡슐은 120개를 한 알 단위로 꺼내 써.\n조금씩 조절하냐, 개수로 세냐가 갈리는 지점.\n\n빨래 적은 날엔 세제 어떻게 맞춰?",
+  "topic_tag": "살림",
+  "affiliate": {
+    "items": [
+      {
+        "product_key": "detergent-tamsa-liquid-14l",
+        "blurb": "액체 세탁세제 14L"
+      },
+      {
+        "product_key": "detergent-bubbleup-capsule-120",
+        "blurb": "초고농축 캡슐 세탁세제 120개입"
+      }
+    ]
+  },
+  "status": "pending"
+}
